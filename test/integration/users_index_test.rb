@@ -29,4 +29,15 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     get users_path
     assert_select 'a', text: 'delete', count:0
   end
+
+  test "non-activated users should not show" do
+    log_in_as(@non_admin)
+    user = User.paginate(page:1).third
+    user.update_attribute(:activated, false)
+    user.reload 
+    get users_path(page:1)
+    assert_select 'a[href=?]', user_path(user), text: user.name, count: 0
+    get user_path(user)
+    assert_redirected_to root_url
+  end
 end
