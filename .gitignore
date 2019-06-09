@@ -30,3 +30,6 @@ Session.vim
 
 # Ignore figaro file.
 /config/application.yml
+
+# Ignore uploaded test images.
+/public/uploads
