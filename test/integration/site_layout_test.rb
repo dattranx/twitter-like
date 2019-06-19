@@ -25,6 +25,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_path
     assert_select 'a[href=?]', users_path
     assert_select 'a[href=?]', user_path(@user)
+    assert_select 'div.stats', count: 1 
     get users_path
     assert_select "title", full_title("All users")
     get user_path(@user)
