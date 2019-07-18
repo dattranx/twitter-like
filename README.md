@@ -5,9 +5,14 @@ Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](https://www.michaelhartl.com/).
 
 ## Sample app được deploy trên heroku  
-[Twitter-like](https://twitter-like-18300.herokuapp.com/)
+[Twitter-like deployment](https://twitter-like-18300.herokuapp.com/)
+
 *Lưu ý:*
-- Chức năng gửi email xác thực thông qua service của Heroku chưa được kích hoạt.
-- Tài khoản để test các chức năng của blog.
-User: example-1@railstutorial.org
-Password: password
+* Chức năng gửi email xác thực thông qua service của Heroku
+chưa được kích hoạt.
+
+* Tài khoản để test các chức năng của blog.
+
+User: <tt>example-1@railstutorial.org</tt>
+
+Password: <tt>password</tt>
